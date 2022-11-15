@@ -1,0 +1,70 @@
+.howContainer {
+  max-width: 150rem;
+  margin: auto;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 10rem;
+  .grid2col {
+    // padding: 5rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 100rem;
+    margin: auto;
+  }
+}
+
+.howUnit {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 25rem;
+  height: 20rem;
+  font-weight: bold;
+  // text-align: center;
+}
+
+.how1,
+.how2,
+.how3 {
+  position: relative;
+  &::after {
+    position: absolute;
+    // content: "1";
+    font-size: 5rem;
+    color: rgba(240, 255, 248, 0.733);
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    width: 20rem;
+    height: 20rem;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: rgba(2, 133, 2, 0.158);
+    z-index: -1;
+    border-radius: 50%;
+  }
+}
+
+.how1,
+.how2,
+.how3 {
+  &::after {
+    content: "";
+  }
+}
+
+.or {
+  padding-bottom: 5rem;
+  font-size: 8rem;
+  font-weight: bold;
+}
+
+.startOrder {
+  width: 100%;
+  margin: auto;
+  .button-container {
+    text-align: center;
+  }
+}

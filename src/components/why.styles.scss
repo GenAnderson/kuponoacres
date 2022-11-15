@@ -1,0 +1,47 @@
+.sectionWhy {
+  margin-left: 15rem;
+  // overflow: hidden;
+}
+.whyGrid {
+  max-width: 160rem;
+  /* width: 100%; */
+  height: 100%;
+  padding: 0rem 10rem 10rem 10rem;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  /* gap: 1rem; */
+}
+
+.whyIcons {
+  width: 5rem;
+  margin: 2rem;
+  background-color: rgba(94, 143, 106, 0.74);
+  border-radius: 100%;
+  padding: 1rem;
+}
+
+.whyBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 25rem;
+  font-size: 2rem;
+  padding: 2rem;
+  border-radius: 5rem;
+  box-shadow: 0.1rem 0.2rem 0.5rem rgb(4, 39, 26);
+  margin-left: -15rem;
+  background-color: white;
+  transition: ease 0.2s;
+}
+
+.whyBox:hover {
+  cursor: pointer;
+  z-index: 1;
+  transform: translate(-2rem, -1rem);
+  margin-right: 1rem;
+}

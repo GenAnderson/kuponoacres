@@ -1,0 +1,33 @@
+nav {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  // background-color: rgba(4, 39, 26, 0.884);
+  position: fixed;
+  align-items: center;
+
+  .social-media {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-icons {
+    width: 5rem;
+    background-color: white;
+    box-shadow: 0.2rem 0.2rem 0.3rem black;
+    border-radius: 50%;
+    padding: 0.4rem;
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  z-index: 2;
+  cursor: pointer;
+}

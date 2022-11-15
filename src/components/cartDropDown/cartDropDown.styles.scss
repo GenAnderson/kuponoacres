@@ -1,0 +1,15 @@
+.cartDropDownContainer {
+  position: absolute;
+  width: 26rem;
+  height: 36rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 0.1rem solid black;
+  background-color: white;
+  top: 5rem;
+  right: 5rem;
+  z-index: 1;
+  align-items: left;
+  overflow: auto;
+}

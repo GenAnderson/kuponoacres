@@ -1,0 +1,47 @@
+.allProductsContainer {
+  max-width: 100%;
+  justify-items: center;
+  margin: 5rem;
+  gap: 1rem;
+}
+
+.productCard {
+  max-width: 30rem;
+  height: 100%;
+  margin-bottom: 5rem;
+  box-shadow: 0.2rem 0.3rem 0.8rem rgba(2, 133, 2, 0.158);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.788);
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name,
+  &__price {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  &__flavor {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+    position: relative;
+
+    .prodBkg {
+      z-index: -1;
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translate(50%, 0);
+    }
+  }
+
+  &__description {
+    font-size: 1.4rem;
+  }
+}

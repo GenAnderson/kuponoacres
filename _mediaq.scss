@@ -1,0 +1,113 @@
+// MAX HEIGHT 944px
+@media (max-height: 59em) {
+  body {
+    .kuponoLogo {
+      top: 45%;
+    }
+  }
+}
+
+// MAX HEIGHT 865px
+@media (max-height: 54em) {
+  body {
+    .kuponoLogo {
+      top: 48%;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////
+
+//MAX WIDTH 2304px
+@media (max-width: 144em) {
+  body {
+    .whoBackgroundBox {
+      &::after {
+        width: 40%;
+        right: 15%;
+      }
+    }
+
+    .missionBackgroundBox {
+      &::after {
+        width: 25%;
+        left: 22%;
+      }
+    }
+  }
+}
+
+//MAX WIDTH 2016px
+@media (max-width: 126em) {
+  body {
+    .whoBackgroundBox {
+      &::after {
+        width: 48%;
+        right: 10%;
+      }
+    }
+
+    .missionBackgroundBox {
+      &::after {
+        width: 28%;
+        left: 18%;
+      }
+    }
+  }
+}
+
+//MAX WIDTH 1856px
+@media (max-width: 116em) {
+  body {
+    .whoBackgroundBox {
+      &::after {
+        width: 50%;
+        right: 8%;
+      }
+    }
+
+    .missionBackgroundBox {
+      &::after {
+        width: 30%;
+        left: 16%;
+      }
+    }
+  }
+}
+
+//MAX WIDTH 1680px
+@media (max-width: 105em) {
+  body {
+    .whoBackgroundBox {
+      padding: 6rem;
+      &::after {
+        right: 5%;
+      }
+    }
+
+    .missionBackgroundBox {
+      &::after {
+        left: 14%;
+      }
+    }
+  }
+}
+
+//MAX WIDTH 1520px
+@media (max-width: 95em) {
+  body {
+    .whoBackgroundBox {
+      &::after {
+        width: 55%;
+        right: 1%;
+      }
+    }
+
+    .missionBackgroundBox {
+      &::after {
+        width: 35%;
+        left: 10%;
+      }
+    }
+  }
+}

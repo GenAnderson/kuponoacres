@@ -1,0 +1,18 @@
+.cartIconContainer {
+  position: relative;
+  height: 4.5rem;
+  width: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.itemCount {
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  top: 50%;
+  left: 47%;
+  transform: translate(0, -50%);
+}

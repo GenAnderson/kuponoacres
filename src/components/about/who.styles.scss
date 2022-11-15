@@ -1,0 +1,47 @@
+.whoBackgroundBox {
+  position: relative;
+  padding: 10rem;
+  transform: translateY(15rem);
+
+  &::after {
+    content: "";
+    width: 40%;
+    height: 100%;
+    background-color: rgb(8, 68, 46);
+    // opacity: 50%;
+    position: absolute;
+    top: 0;
+    right: 20%;
+    z-index: -1;
+    border-radius: 100%;
+  }
+}
+
+.whoBox {
+  margin: auto;
+  max-width: 120rem;
+  display: flex;
+  overflow: hidden;
+  border-radius: 5rem;
+  box-shadow: 0.5rem 0.7rem 1rem #222;
+  margin-bottom: 2rem;
+}
+
+.whoTextBox {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(248, 248, 248);
+
+  transition: ease 1s;
+}
+
+.whoText {
+  text-align: center;
+  padding: 3rem 5rem 5rem 5rem;
+}
+.whoPhoto {
+  max-width: 50rem;
+  height: 100%;
+}
