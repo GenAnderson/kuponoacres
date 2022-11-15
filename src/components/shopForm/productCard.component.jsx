@@ -22,8 +22,7 @@ const ProductCard = ({ product }) => {
         <img className="prodBkg" src={photo} alt={name} />
       </div>
       <span className="productCard__description">{description}</span>
-      <span className="productCar__nutrients">{nutrients}</span>
-
+      <span className="productCard__nutrients">{nutrients}</span>
       <div className="btnDiv">
         <Buttons buttonType={"addToCart"} onClick={addProductToCart}>
           Add

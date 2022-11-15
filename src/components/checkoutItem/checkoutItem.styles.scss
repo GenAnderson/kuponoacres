@@ -1,0 +1,38 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkoutItemsContainer {
+  padding: 2.5rem 10rem;
+  font-size: 2.5rem;
+}
+
+.checkout {
+  &__name {
+    justify-self: left;
+    @include flexCenter;
+  }
+  &__photo {
+    max-width: 5rem;
+    object-fit: cover;
+    margin-right: 2rem;
+  }
+  &__quantity {
+    font-size: 2.5rem;
+    gap: 2rem;
+    @include flexCenter;
+
+    .arrow {
+      cursor: pointer;
+    }
+  }
+  &__price {
+    @include flexCenter;
+  }
+  &__remove {
+    cursor: pointer;
+    @include flexCenter;
+  }
+}

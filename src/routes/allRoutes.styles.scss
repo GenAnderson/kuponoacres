@@ -1,10 +1,31 @@
 //////////FINALIZE ORDER PAGE//////////
 .finalizeOrderContainer {
   text-align: center;
-  padding: 0, 5rem;
-  font-size: 1.8rem;
+  padding: 0rem 5rem;
+  max-width: 180rem;
+  margin: auto;
 
   h1 {
     font-size: 5rem;
   }
+}
+
+.subHeaderContainer {
+  padding: 5rem 10rem 2.5rem 10rem;
+  font-size: 2.8rem;
+  justify-content: center;
+  border-bottom: 0.1rem solid black;
+  gap: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.total {
+  display: flex;
+  justify-content: end;
+  padding: 5rem 20rem;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 0.1rem solid black;
 }

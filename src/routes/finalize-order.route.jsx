@@ -1,33 +1,38 @@
-import { useContext } from "react";
+import { Fragment, useContext } from "react";
 import { CartContext } from "../context/cart.context";
 
 import ContactInfo from "../components/shopForm/contactInfo.component";
 
 import "./allRoutes.styles.scss";
+import CheckOutItem from "../components/checkoutItem/checkoutItem";
 
 const FinalizeOrder = function () {
-  const { cartItems, addItemToCart } = useContext(CartContext);
+  const { cartItems } = useContext(CartContext);
 
   return (
     <div className="finalizeOrderContainer">
       <div>
         <ContactInfo />
       </div>
-      <div>
-        {cartItems.map((cartItem) => {
-          const { id, name, quantity } = cartItem;
-          return (
-            <div key={id}>
-              <h2>{name}</h2>
-              <span>{quantity}</span>
-              <br />
-              <span>decrement</span>
-              <br />
-              <span onClick={() => addItemToCart(cartItem)}>increment</span>
-            </div>
-          );
-        })}
+
+      <div className="subHeaderContainer grid4col">
+        <div className="order__subHeader">
+          <span>Product</span>
+        </div>
+        <div className="order__subHeader">
+          <span>Quantity</span>
+        </div>
+        <div className="order__subHeader">
+          <span>Price</span>
+        </div>
+        <div className="order__subHeader">
+          <span>Remove</span>
+        </div>
       </div>
+      {cartItems.map((cartItem) => (
+        <CheckOutItem key={cartItem.id} cartItem={cartItem} />
+      ))}
+      <div className="total">Total:??</div>
     </div>
   );
 };
