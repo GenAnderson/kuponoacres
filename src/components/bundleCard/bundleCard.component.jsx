@@ -37,7 +37,7 @@ const BundleCard = ({ product }) => {
         ></a>
         <img src={photo} alt={name} />
         <Buttons buttonType="smaller" onClick={handleClick}>
-          Order
+          Select
         </Buttons>
       </div>
       <div className="mainBundles bundle__back">

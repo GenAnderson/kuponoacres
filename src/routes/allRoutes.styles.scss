@@ -20,12 +20,20 @@
   font-weight: bold;
 }
 
-.total {
+.totalContainer {
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
   padding: 5rem 20rem;
-  font-size: 3rem;
-  font-weight: bold;
-  text-transform: uppercase;
   border-top: 0.1rem solid black;
+
+  .total {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .tax {
+    font-size: 1.5rem;
+  }
 }

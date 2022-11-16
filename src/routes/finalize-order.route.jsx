@@ -1,4 +1,4 @@
-import { Fragment, useContext } from "react";
+import { useContext } from "react";
 import { CartContext } from "../context/cart.context";
 
 import ContactInfo from "../components/shopForm/contactInfo.component";
@@ -7,7 +7,7 @@ import "./allRoutes.styles.scss";
 import CheckOutItem from "../components/checkoutItem/checkoutItem";
 
 const FinalizeOrder = function () {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, cartTotal } = useContext(CartContext);
 
   return (
     <div className="finalizeOrderContainer">
@@ -23,7 +23,7 @@ const FinalizeOrder = function () {
           <span>Quantity</span>
         </div>
         <div className="order__subHeader">
-          <span>Price</span>
+          <span>Unit Price</span>
         </div>
         <div className="order__subHeader">
           <span>Remove</span>
@@ -32,7 +32,10 @@ const FinalizeOrder = function () {
       {cartItems.map((cartItem) => (
         <CheckOutItem key={cartItem.id} cartItem={cartItem} />
       ))}
-      <div className="total">Total:??</div>
+      <div className="totalContainer">
+        <p className="total">Total: ${cartTotal}</p>
+        <p className="tax">(Tax included)</p>
+      </div>
     </div>
   );
 };

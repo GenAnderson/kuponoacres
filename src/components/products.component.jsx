@@ -1,10 +1,19 @@
+import Buttons from "./buttons/buttons.component";
 import "./products.styles.scss";
+import pdf from "../aboutMicrogreens.pdf";
 
 const ProductsSection = () => {
   return (
     <div className="sectionContainer" id="products">
       <div className="products-box grid5col2row">
-        <p className="sectionHeading fixSpanGrid">Products</p>
+        <div className="fixSpanGrid">
+          <p className="sectionHeading">Products</p>
+          <Buttons buttonType={"smallBack"}>
+            <a href={pdf} target="_blank">
+              Learn more about microgreens →
+            </a>
+          </Buttons>
+        </div>
         <div className="products-text-box">
           <p className="number">01</p>
           <p className="desc">Nutrient-Dense Microgreens</p>
@@ -52,13 +61,6 @@ const ProductsSection = () => {
             alt="microgreen edible flowers"
           />
         </div>
-      </div>
-      <div className="background-box">
-        <img
-          src={require("../images/products-bkg.jpg")}
-          className="products-photo-bkg"
-          alt="microgreens"
-        />
       </div>
     </div>
   );

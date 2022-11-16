@@ -3,7 +3,6 @@ import { allProductContext } from "../context/products.context";
 
 import ProductCard from "../components/shopForm/productCard.component";
 import BundleCard from "../components/bundleCard/bundleCard.component";
-import ContactInfo from "../components/shopForm/contactInfo.component";
 
 const Shop = () => {
   const { allProducts } = useContext(allProductContext);

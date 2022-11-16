@@ -11,8 +11,10 @@
 
 .checkout {
   &__name {
-    justify-self: left;
-    @include flexCenter;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
   }
   &__photo {
     max-width: 5rem;

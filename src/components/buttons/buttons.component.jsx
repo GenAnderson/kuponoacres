@@ -6,6 +6,7 @@ const BUTTON_TYPE_CLASSES = {
   addToCart: "addToCart",
   smallBack: "smallBack",
   sendOrder: "sendOrder",
+  finalizeSubmit: "finalizeSubmit",
 };
 
 const Buttons = ({ children, buttonType, ...otherProps }) => {
