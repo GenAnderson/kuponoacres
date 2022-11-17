@@ -1,12 +1,13 @@
 import { useRef } from "react";
 import { useContext } from "react";
 import { CartContext } from "../../context/cart.context.jsx";
+import emailjs from "@emailjs/browser";
 
 import Buttons from "../buttons/buttons.component";
 
 import "./contactInfo.styles.scss";
 
-const ContactInfo = () => {
+const ContactInfo = (props) => {
   const { cartItems } = useContext(CartContext);
   const { cartTotal } = useContext(CartContext);
 
@@ -18,31 +19,58 @@ const ContactInfo = () => {
   const submitHandler = function (event) {
     event.preventDefault();
 
+    event.currentTarget.parentElement.lastChild.lastChild.lastChild.classList.remove(
+      "displayNone"
+    );
+
     const enteredFirstName = firstNameInputRef.current.value;
     const enteredLastName = lastNameInputRef.current.value;
     const enteredEmail = emailInputRef.current.value;
     const enteredNumber = numberInputRef.current.value;
     const total = cartTotal;
 
-    const finalCart = [];
-    cartItems.forEach((item) => {
-      const buyItem = {
-        name: item.name,
-        quantity: item.quantity,
-        price: item.price,
-      };
-      finalCart.push(buyItem);
-    });
-
-    const allInfoSend = {
+    const orderInfo = {
       First_Name: enteredFirstName,
       Last_Name: enteredLastName,
       Email: enteredEmail,
       Number: enteredNumber,
       Cart_Total: total,
-      Cart_Items: finalCart,
     };
-    console.log(allInfoSend);
+
+    const finalCart = [];
+    cartItems.forEach((item) => {
+      const qtyAndProduct = `${item.quantity + "x " + item.name}`;
+      finalCart.push(qtyAndProduct);
+    });
+
+    const finalOrderInfo = Object.assign({ ...finalCart }, orderInfo);
+
+    console.log(finalOrderInfo);
+    // const finalCart = [];
+    // cartItems.forEach((item) => {
+    //   const buyItem = {
+    //     name: item.name,
+    //     quantity: item.quantity,
+    //     price: item.price,
+    //   };
+    //   finalCart.push(buyItem);
+    // });
+
+    emailjs
+      .send(
+        "service_7odam6k",
+        "template_ooqvh9q",
+        finalOrderInfo,
+        "f7ubLR15pkBC2Sece"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -88,7 +116,7 @@ const ContactInfo = () => {
           <div>
             <label className="regularInput">
               <input
-                type="text"
+                type="tel"
                 id="number"
                 name="number"
                 placeholder="Number"
@@ -97,6 +125,7 @@ const ContactInfo = () => {
               />
             </label>
           </div>
+
           <div className="submitInstructions">
             <p>1. Fill out the contact form above.</p>
             <br />
@@ -106,6 +135,9 @@ const ContactInfo = () => {
               3. Hit submit when you're done and we'll contact you if needed!
             </p>
             <Buttons buttonType={"finalizeSubmit"}>Submit!</Buttons>
+            <div className="orderSent displayNone">
+              Your order request has been sent.
+            </div>
           </div>
         </form>
       </div>

@@ -43,3 +43,15 @@ form {
   justify-content: center;
   align-items: center;
 }
+
+.orderSent {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: rgba(60, 255, 0, 0.452);
+  padding: 0.5rem 0rem;
+  width: 100%;
+}
+
+.displayNone {
+  display: none;
+}

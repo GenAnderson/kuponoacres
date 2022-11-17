@@ -1,3 +1,0 @@
-function sendItems(allInfoSend) {
-  fetch();
-}

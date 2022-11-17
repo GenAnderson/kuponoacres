@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import { CartContext } from "../../context/cart.context";
-import Buttons from "../buttons/buttons.component";
 
 import CartDropDown from "../cartDropDown/cartDropDown.component";
 import CartIcon from "../cartIcon/cartIcon.component";
@@ -17,7 +16,11 @@ const Navigation = () => {
     <Fragment>
       <nav>
         <div className="social-media">
-          <a href="https://www.facebook.com/kupono.acres" target="_blank">
+          <a
+            href="https://www.facebook.com/kupono.acres"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src={require("../../images/icon-facebook.png")}
               className="nav-icons"
@@ -28,6 +31,7 @@ const Navigation = () => {
           <a
             href="https://www.instagram.com/kuponoacres/?hl=en"
             target="_blank"
+            rel="noreferrer"
           >
             <img
               src={require("../../images/icon-instagram.png")}
