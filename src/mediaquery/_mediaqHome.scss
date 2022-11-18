@@ -527,16 +527,20 @@
       .bundlesContainer {
         max-height: none;
         height: 160rem;
+        padding: 1rem;
       }
     }
     .mainBundles {
       width: 30rem;
+      height: 37rem;
 
       .bundle__front {
         width: 30rem;
+        height: 37rem;
       }
       .bundle__back {
         width: 30rem;
+        height: 37rem;
       }
     }
   }
@@ -591,6 +595,10 @@
       .desc {
         padding: 0.5rem;
       }
+    }
+    .button-container.smallBack {
+      font-size: 1.4rem;
+      border-radius: 1rem;
     }
     .delivery__info {
       display: block;

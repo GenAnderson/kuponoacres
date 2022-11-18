@@ -72,18 +72,18 @@
       }
       .bundlesContainer {
         max-height: none;
-        height: 150rem;
+        height: 155rem;
         padding: 1rem;
       }
 
       .mainBundles {
-        height: 35rem;
+        height: 37rem;
 
         .bundle__front {
-          height: 35rem;
+          height: 37rem;
         }
         .bundle__back {
-          height: 35rem;
+          height: 37rem;
         }
       }
     }
@@ -108,7 +108,7 @@
     .productCard__flavor {
       .prodBkg {
         top: -5%;
-        right: 30%;
+        right: 24%;
         transform: scale(75%);
       }
     }
@@ -147,6 +147,11 @@
         .bundle__back {
           width: 26rem;
         }
+      }
+    }
+    .productCard__flavor {
+      .prodBkg {
+        right: 10%;
       }
     }
   }
