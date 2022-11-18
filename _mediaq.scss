@@ -16,6 +16,26 @@
   }
 }
 
+// MAX HEIGHT 752px
+@media (max-height: 47em) {
+  body {
+    .kuponoLogo {
+      top: 53%;
+    }
+  }
+}
+
+// MAX HEIGHT 688px
+@media (max-height: 43em) {
+  body {
+    .heroText {
+      padding-top: 10rem;
+    }
+    .sectionHeading__why {
+      padding: 1rem 5rem 5rem 5rem;
+    }
+  }
+}
 ///////////////////////////////////////////////////////////////
 
 //MAX WIDTH 2304px
@@ -23,15 +43,15 @@
   body {
     .whoBackgroundBox {
       &::after {
-        width: 40%;
-        right: 15%;
+        width: 33%;
+        right: 23%;
       }
     }
 
     .missionBackgroundBox {
       &::after {
-        width: 25%;
-        left: 22%;
+        width: 20%;
+        left: 23%;
       }
     }
   }
@@ -42,15 +62,15 @@
   body {
     .whoBackgroundBox {
       &::after {
-        width: 48%;
-        right: 10%;
+        width: 38%;
+        right: 20%;
       }
     }
 
     .missionBackgroundBox {
       &::after {
-        width: 28%;
-        left: 18%;
+        width: 22%;
+        left: 21%;
       }
     }
   }
@@ -59,17 +79,20 @@
 //MAX WIDTH 1856px
 @media (max-width: 116em) {
   body {
+    nav {
+      padding: 0.5rem 2rem;
+    }
     .whoBackgroundBox {
       &::after {
-        width: 50%;
-        right: 8%;
+        width: 42%;
+        right: 16%;
       }
     }
 
     .missionBackgroundBox {
       &::after {
-        width: 30%;
-        left: 16%;
+        width: 25%;
+        left: 18%;
       }
     }
   }
@@ -79,15 +102,15 @@
 @media (max-width: 105em) {
   body {
     .whoBackgroundBox {
-      padding: 6rem;
       &::after {
-        right: 5%;
+        width: 46%;
+        right: 14%;
       }
     }
 
     .missionBackgroundBox {
       &::after {
-        left: 14%;
+        left: 15%;
       }
     }
   }
@@ -96,18 +119,445 @@
 //MAX WIDTH 1520px
 @media (max-width: 95em) {
   body {
+    .sectionWhy {
+      margin-left: 0rem;
+    }
+    .whyBox {
+      margin-left: -1rem;
+    }
+    .whyGrid {
+      padding: 0rem 5rem 10rem 5rem;
+    }
+
+    .whyBox:hover {
+      transform: translate(-1rem, -1rem);
+    }
     .whoBackgroundBox {
       &::after {
-        width: 55%;
-        right: 1%;
+        width: 50%;
+        right: 10%;
       }
     }
 
     .missionBackgroundBox {
       &::after {
-        width: 35%;
+        width: 30%;
         left: 10%;
       }
+    }
+  }
+}
+
+//MAX WIDTH 1392px
+@media (max-width: 87em) {
+  body {
+    .heroTextBelow {
+      padding: 0rem 5rem;
+    }
+
+    .whoBox {
+      max-width: 90rem;
+      margin-bottom: 0rem;
+    }
+
+    .whoBackgroundBox::after {
+      width: 56%;
+      right: 5%;
+      top: 5%;
+    }
+
+    .missionBox {
+      max-width: 90rem;
+    }
+    .missionBackgroundBox::after {
+      width: 30%;
+      left: 11%;
+    }
+
+    .missionTextBox {
+      align-items: center;
+    }
+
+    .missionText {
+      padding: 0rem 2rem 2rem 2rem;
+    }
+
+    .bundlesContainer {
+      max-width: none;
+    }
+
+    .mainBundles {
+      .bundle__front {
+        width: 25rem;
+      }
+      .bundle__back {
+        width: 25rem;
+      }
+    }
+    .bundle__cost {
+      font-size: 3rem;
+    }
+    .bundle__name {
+      padding-bottom: 1rem;
+    }
+    select {
+      width: fit-content;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+//MAX WIDTH 1200px
+@media (max-width: 75em) {
+  body {
+    .background-box {
+      height: 30vh;
+    }
+
+    .whyGrid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      padding: 0rem 5rem 5rem 5rem;
+      max-width: none;
+      width: 100%;
+      column-gap: 1rem;
+      justify-content: center;
+    }
+
+    .whyBox {
+      flex-direction: row;
+      height: 12rem;
+      margin-left: 0;
+      text-align: left;
+      max-width: none;
+      width: 50rem;
+      margin-bottom: -1rem;
+    }
+
+    .whyBox:hover {
+      transform: translate(0rem, -1rem);
+    }
+    .whoBackgroundBox::after {
+      width: 65%;
+      right: 0%;
+    }
+    .missionBackgroundBox::after {
+      width: 36%;
+      left: 3%;
+    }
+
+    .howContainer {
+      .grid4col {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+      .bundlesContainer {
+        height: 85rem;
+        max-width: 65rem;
+        gap: 2rem;
+        margin: auto;
+      }
+    }
+    .notesContainer {
+      margin-top: 3rem;
+    }
+    .howContainer {
+      margin-top: 0;
+    }
+
+    .products-text-box {
+      .products-miniphoto {
+        max-width: none;
+        width: 18rem;
+        height: 28rem;
+      }
+    }
+  }
+}
+
+//MAX WIDTH 1056px (small laptop)
+@media (max-width: 66em) {
+  body {
+    .kuponoLogo {
+      top: 47%;
+      width: 23vh;
+    }
+    .sectionHeading {
+      font-size: 4.5rem;
+      letter-spacing: 0.2rem;
+      padding: 3rem;
+    }
+
+    .whyBox {
+      height: 15rem;
+      width: 40rem;
+    }
+
+    .whoBackgroundBox {
+      padding: 10rem 5rem;
+    }
+    .whoBox {
+      max-width: none;
+      width: 100%;
+      grid-template-columns: 62% 38%;
+    }
+    .whoText {
+      padding: 0rem 2rem 2rem 2rem;
+    }
+
+    .whoBackgroundBox::after {
+      width: 65%;
+      right: 0%;
+    }
+    .howContainer {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+//MAX WIDTH 912px
+@media (max-width: 57em) {
+  body {
+    .heroText {
+      h1 {
+        font-size: 8rem;
+        letter-spacing: 0.8rem;
+      }
+    }
+    .heroTextTwo {
+      font-size: 3rem;
+    }
+    .heroTextBelow {
+      font-size: 1.7rem;
+      padding: 0rem 2rem;
+    }
+    .sectionHeading {
+      font-size: 4rem;
+      letter-spacing: 0.1rem;
+    }
+    .whyBox {
+      font-size: 1.7rem;
+    }
+    .aboutBox {
+      font-size: 1.7rem;
+    }
+    .missionBox {
+      max-width: 65rem;
+      grid-template-columns: 40% 60%;
+    }
+    .missionBackgroundBox::after {
+      left: 9%;
+    }
+    .button-container {
+      padding: 0rem 1rem;
+      height: 4rem;
+      border-radius: 1.5rem;
+    }
+    .products-text-box {
+      font-size: 1.7rem;
+
+      .products-miniphoto {
+        width: 12rem;
+        height: 18rem;
+      }
+    }
+    .howContainer {
+      font-size: 1.7rem;
+    }
+
+    .bundle__text {
+      font-size: 1.8rem;
+    }
+    nav {
+      .nav-icons {
+        padding: 0.2rem;
+        width: 4.5rem;
+      }
+    }
+  }
+}
+
+//MAX WIDTH 768px (tablet)
+@media (max-width: 48em) {
+  body {
+    .heroText {
+      padding-top: 22rem;
+    }
+    .heroTextTwo {
+      padding: 5rem;
+    }
+    .whyBox {
+      height: 15rem;
+      width: 30rem;
+    }
+    .background-box {
+      height: 25vh;
+    }
+    .whoBox {
+      grid-template-columns: 52% 48%;
+    }
+
+    .whoBackgroundBox::after {
+      width: 70%;
+      height: 85%;
+      top: 8%;
+    }
+    .missionBackgroundBox::after {
+      width: 40%;
+      left: 2%;
+    }
+  }
+}
+
+//MAX WIDTH 688px
+@media (max-width: 43em) {
+  body {
+    .whyGrid {
+      grid-template-columns: none;
+      grid-template-rows: repeat(6, 1fr);
+    }
+    .whyBox {
+      border-radius: 4rem;
+      height: 9rem;
+      width: 100%;
+    }
+    .whoBox {
+      grid-template-columns: none;
+      grid-template-rows: auto auto;
+    }
+
+    .whoPhoto {
+      object-fit: scale-down;
+    }
+    .whoBackgroundBox::after {
+      display: none;
+    }
+    .whoTextBox {
+      grid-row: 2/3;
+      height: 100%;
+    }
+
+    .products-box {
+      display: block;
+    }
+    .products-text-box {
+      width: 50rem;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 75% 25%;
+      grid-template-rows: auto auto;
+      padding: 1rem 1rem;
+      // gap: 1.5rem;
+      .number {
+        width: 100%;
+        border-radius: 0%;
+        margin: 0;
+        align-self: flex-start;
+      }
+      .products-miniphoto {
+        grid-column: 2/3;
+        grid-row: 1/3;
+        width: 12rem;
+        height: 12rem;
+      }
+    }
+    .desc {
+      align-self: flex-start;
+    }
+
+    .bundlesContainer {
+      padding: 5rem 2rem;
+    }
+    .howContainer {
+      padding: 0rem 2rem 5rem 2rem;
+    }
+    .delivery__info {
+      gap: 2rem;
+    }
+  }
+}
+
+//MAX WIDTH 592px
+@media (max-width: 37em) {
+  body {
+    .kuponoLogo {
+      top: 51%;
+      width: 20vh;
+    }
+    .missionBackgroundBox::after {
+      width: 50%;
+      left: 2%;
+    }
+    .whyBox {
+      height: 11rem;
+    }
+    .products-text-box {
+      width: 35rem;
+    }
+    .howContainer {
+      .grid4col {
+        grid-template-columns: none;
+        grid-template-rows: repeat(4, 1fr);
+      }
+      .bundlesContainer {
+        max-height: none;
+        height: 160rem;
+      }
+    }
+    .mainBundles {
+      width: 30rem;
+
+      .bundle__front {
+        width: 30rem;
+      }
+      .bundle__back {
+        width: 30rem;
+      }
+    }
+  }
+}
+
+//MAX WIDTH 464px
+@media (max-width: 29em) {
+  body {
+    .whyGrid {
+      padding: 0rem 2rem 2rem 2rem;
+    }
+    .whyBox {
+      padding: 1.2rem;
+      height: 12rem;
+    }
+    .whoBackgroundBox {
+      padding: 5rem 2rem;
+    }
+    .missionBackgroundBox {
+      padding: 5rem 2rem;
+    }
+    .missionBackgroundBox::after {
+      width: 75%;
+      left: 12%;
+    }
+    .missionBox {
+      grid-template-columns: 1fr 1fr;
+    }
+    .products-text-box {
+      width: 30rem;
+      grid-template-columns: 60% 40%;
+    }
+    .delivery__info {
+      display: block;
+    }
+    .delivery__centralOahu {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+//MAX WIDTH 368px
+@media (max-width: 23em) {
+  body {
+    .kuponoLogo {
+      width: 18vh;
     }
   }
 }

@@ -65,7 +65,7 @@ const How = () => {
             *containers are plant-based, biodegradable, and compostable
           </p>
           <p className="notes__payment">
-            Payment can be made by cash, check, or square upon delivery.
+            Payment can be made by cash, check, or square, upon delivery.
           </p>
         </div>
         <div className="delivery__info grid2col">

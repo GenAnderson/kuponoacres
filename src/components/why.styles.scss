@@ -4,16 +4,14 @@
 }
 .whyGrid {
   max-width: 160rem;
-  /* width: 100%; */
   height: 100%;
   padding: 0rem 10rem 10rem 10rem;
   margin: auto;
 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: auto 1fr;
+  // grid-template-rows: auto 1fr;
   justify-items: center;
-  /* gap: 1rem; */
 }
 
 .whyIcons {

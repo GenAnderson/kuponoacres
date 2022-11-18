@@ -12,7 +12,6 @@ const Who = () => {
       ref={myRefWho}
       className={`${"whoBackgroundBox"} ${elementVisible ? "shiftUp" : ""}`}
     >
-      {/* ${elementVisible ? "shiftUp" : ""} */}
       <div className="whoBox">
         <div className="whoTextBox">
           <p className="sectionHeading">Who we are</p>

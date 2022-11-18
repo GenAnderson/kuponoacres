@@ -3,7 +3,7 @@ import "./why.styles.scss";
 const WhySection = () => {
   return (
     <div>
-      <h2 className="sectionHeading">Why choose us</h2>
+      <h2 className="sectionHeading sectionHeading__why">Why choose us</h2>
       <section className="sectionWhy">
         <div className="whyGrid">
           <div className="whyBox">

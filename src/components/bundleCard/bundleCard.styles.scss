@@ -53,11 +53,11 @@
 
 .mainBundles {
   position: relative;
-
   perspective: 500rem;
   -moz-perspective: 500rem;
   transition: all 0.8s;
   backface-visibility: hidden;
+
   .bundle__front {
     width: 30rem;
     height: 100%;

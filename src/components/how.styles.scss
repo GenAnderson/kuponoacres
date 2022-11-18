@@ -1,10 +1,7 @@
 .background-box {
   height: 50vh;
-  // height: 80vh;
   width: 100%;
   top: 0;
-  // position: absolute;
-  // top: 0;
   z-index: -1;
   position: sticky;
 }
@@ -65,7 +62,8 @@
 
 .delivery__location {
   font-weight: bold;
-  background-color: rgba(0, 128, 0, 0.527);
+  background-color: rgb(8, 68, 46);
+  color: white;
   padding: 1rem;
 }
 

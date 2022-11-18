@@ -34,9 +34,7 @@ const ProductsSection = () => {
         </div>
         <div className="products-text-box">
           <p className="number">03</p>
-          <p className="desc">
-            Chef Select Microgreens (available to everyone)
-          </p>
+          <p className="desc">Chef Select Microgreens</p>
           <img
             src={require("../images/chef.jpg")}
             className="products-miniphoto"

@@ -5,6 +5,7 @@
   font-size: 2rem;
   background-color: rgb(8, 68, 46);
   box-shadow: 0.2rem 0.2rem 0.3rem rgb(1, 7, 5);
+  // z-index: 15;
 
   color: white;
   text-transform: uppercase;
@@ -16,7 +17,6 @@
   align-items: center;
   border-radius: 5rem;
   margin: 1rem;
-
   &:hover {
     background-color: white;
     color: rgb(8, 68, 46);
@@ -49,6 +49,9 @@
     margin: 0.1rem;
     border-radius: 2rem;
     height: auto;
+    @media (max-width: 57em) {
+      font-size: 1.8rem;
+    }
   }
 
   &.sendOrder {
