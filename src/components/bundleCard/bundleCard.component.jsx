@@ -17,8 +17,10 @@ const BundleCard = ({ product }) => {
   }
 
   function goBack(event) {
-    event.currentTarget.parentElement.classList.remove("rotateBack");
-    event.currentTarget.parentElement.previousSibling.classList.remove(
+    event.currentTarget.parentElement.parentElement.classList.remove(
+      "rotateBack"
+    );
+    event.currentTarget.parentElement.parentElement.previousSibling.classList.remove(
       "rotateFront"
     );
   }
@@ -41,10 +43,12 @@ const BundleCard = ({ product }) => {
         </Buttons>
       </div>
       <div className="mainBundles bundle__back">
-        <Buttons buttonType="smallBack" onClick={goBack}>
-          ←
-        </Buttons>
-        <p className="dropDownListText">Select {countSelection}</p>
+        <div className="gridSpecial">
+          <Buttons buttonType="smallBack" onClick={goBack}>
+            ←
+          </Buttons>
+          <p className="dropDownListText">Select {countSelection}</p>
+        </div>
         <div className="dropDownListBox">
           {+countSelection > 0 ? <DropDownList /> : ""}
           {+countSelection > 1 ? <DropDownList /> : ""}

@@ -1,0 +1,153 @@
+// MAX WIDTH 1376px
+@media (max-width: 86em) {
+  body {
+    .heroTextBelow {
+      height: 35vh;
+    }
+    .allProductsContainer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+// MAX WIDTH 1248px
+@media (max-width: 78em) {
+  body {
+    .allProductsContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .shopContainer {
+    .grid4col {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    .bundlesContainer {
+      height: 85rem;
+      max-width: 65rem;
+      gap: 2rem;
+      margin: auto;
+    }
+  }
+}
+
+// MAX WIDTH 912px
+@media (max-width: 57em) {
+  body {
+    .allProductsContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// MAX WIDTH 720px
+@media (max-width: 45em) {
+  body {
+    .shopContainer {
+      .bundlesContainer {
+        gap: 1rem;
+      }
+      .mainBundles {
+        width: 27rem;
+
+        .bundle__front {
+          width: 27rem;
+        }
+        .bundle__back {
+          width: 27rem;
+        }
+      }
+    }
+  }
+}
+
+//MAX WIDTH 592px
+@media (max-width: 37em) {
+  body {
+    .shopContainer {
+      .grid4col {
+        grid-template-columns: none;
+        grid-template-rows: repeat(4, 1fr);
+      }
+      .bundlesContainer {
+        max-height: none;
+        height: 150rem;
+        padding: 1rem;
+      }
+
+      .mainBundles {
+        height: 35rem;
+
+        .bundle__front {
+          height: 35rem;
+        }
+        .bundle__back {
+          height: 35rem;
+        }
+      }
+    }
+    .allProductsContainer {
+      margin: 2rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    .productCard {
+      max-width: none;
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 0;
+      .button-container.addToCart {
+        width: fit-content;
+      }
+      .btnDiv {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .productCard__flavor {
+      .prodBkg {
+        top: -5%;
+        right: 30%;
+        transform: scale(75%);
+      }
+    }
+    .shopNotes {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+//MAX WIDTH 400px
+@media (max-width: 25em) {
+  body {
+    .mediumHeader {
+      font-size: 3rem;
+      padding: 2rem;
+    }
+    .bundle__name {
+      font-size: 2rem;
+    }
+    .bundle__cost {
+      font-size: 2.5rem;
+    }
+    .bundle__text {
+      font-size: 1.6rem;
+    }
+    .button-container.smaller {
+      font-size: 1.4rem;
+    }
+    .shopContainer {
+      .mainBundles {
+        width: 26rem;
+
+        .bundle__front {
+          width: 26rem;
+        }
+        .bundle__back {
+          width: 26rem;
+        }
+      }
+    }
+  }
+}
