@@ -620,10 +620,15 @@
       padding-bottom: 5rem;
     }
     .products-text-box {
-      width: 30rem;
-      grid-template-columns: 60% 40%;
+      width: 100%;
+      grid-template-columns: 3fr auto;
       .desc {
         padding: 0.5rem;
+      }
+      .products-miniphoto {
+        height: 8rem;
+        width: 8rem;
+        justify-self: right;
       }
     }
     .button-container.smallBack {
@@ -635,6 +640,9 @@
     }
     .delivery__centralOahu {
       margin-bottom: 2rem;
+    }
+    .howContainer {
+      margin-bottom: 0rem;
     }
   }
 }
@@ -658,9 +666,6 @@
       .bundle__back {
         width: 26rem;
       }
-    }
-    .howContainer {
-      margin-bottom: 0rem;
     }
   }
 }
