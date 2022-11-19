@@ -29,6 +29,9 @@
 
     .arrow {
       cursor: pointer;
+      font-weight: bold;
+      background-color: rgb(178, 245, 178);
+      padding: 0.1rem;
     }
   }
   &__price {
