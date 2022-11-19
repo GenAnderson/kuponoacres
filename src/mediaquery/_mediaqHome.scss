@@ -58,7 +58,27 @@
   }
 }
 
-///////////////////////////////////////////////////////////////
+//MAX HEIGHT 450px & MAX WIDTH 890px
+@media (max-height: 28em) and (max-width: 56em) {
+  body {
+    .sectionHero {
+      height: 115vh;
+      .heroText {
+        padding-top: 6rem;
+        h1 {
+          font-size: 6rem;
+        }
+      }
+      .heroTextBelow {
+        height: 40vh;
+      }
+      .kuponoLogo {
+        top: 26%;
+        width: 32vh;
+      }
+    }
+  }
+}
 
 //MAX WIDTH 2304px
 @media (max-width: 144em) {

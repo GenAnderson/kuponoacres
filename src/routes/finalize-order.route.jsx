@@ -20,13 +20,13 @@ const FinalizeOrder = function () {
           <span>Product</span>
         </div>
         <div className="order__subHeader">
-          <span>Quantity</span>
+          <span>Qty</span>
         </div>
         <div className="order__subHeader">
-          <span>Unit Price</span>
+          <span>$ea.</span>
         </div>
         <div className="order__subHeader">
-          <span>Remove</span>
+          <span>&#10005;</span>
         </div>
       </div>
       {cartItems.map((cartItem) => (

@@ -134,6 +134,13 @@ const ContactInfo = (props) => {
             <p>
               3. Hit submit when you're done and we'll contact you if needed!
             </p>
+            <br />
+            <em>
+              <p className="notes__payment">
+                Reminder: Payment can be made by cash, check, or square, upon
+                delivery.
+              </p>
+            </em>
             <Buttons buttonType={"finalizeSubmit"}>Submit!</Buttons>
             <div className="orderSent displayNone">
               Your order request has been sent.
