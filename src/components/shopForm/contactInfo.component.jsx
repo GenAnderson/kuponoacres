@@ -7,9 +7,11 @@ import Buttons from "../buttons/buttons.component";
 
 import "./contactInfo.styles.scss";
 
-const ContactInfo = (props) => {
+const ContactInfo = () => {
   const { cartItems } = useContext(CartContext);
   const { cartTotal } = useContext(CartContext);
+
+  console.log("cartItems: ", cartItems);
 
   const firstNameInputRef = useRef();
   const lastNameInputRef = useRef();
@@ -45,7 +47,6 @@ const ContactInfo = (props) => {
 
     const finalOrderInfo = Object.assign({ ...finalCart }, orderInfo);
 
-    console.log(finalOrderInfo);
     // const finalCart = [];
     // cartItems.forEach((item) => {
     //   const buyItem = {
@@ -56,21 +57,21 @@ const ContactInfo = (props) => {
     //   finalCart.push(buyItem);
     // });
 
-    emailjs
-      .send(
-        "service_7odam6k",
-        "template_ooqvh9q",
-        finalOrderInfo,
-        "f7ubLR15pkBC2Sece"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    // emailjs
+    //   .send(
+    //     "service_7odam6k",
+    //     "template_ooqvh9q",
+    //     finalOrderInfo,
+    //     "f7ubLR15pkBC2Sece"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(result.text);
+    //     },
+    //     (error) => {
+    //       console.log(error.text);
+    //     }
+    //   );
   };
 
   return (

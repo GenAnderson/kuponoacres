@@ -1,6 +1,10 @@
 import { createContext, useState, useEffect } from "react";
 
-const addCartItem = (cartItems, productToAdd) => {
+const addCartItem = (cartItems, productToAdd, bundleItems) => {
+  console.log(bundleItems);
+
+  //NEED A WAY TO GET BUNDLE ITEMS TO END!!!
+
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === productToAdd.id
   );
@@ -17,6 +21,26 @@ const addCartItem = (cartItems, productToAdd) => {
   }
   return [...cartItems, { ...productToAdd, quantity: 1 }];
 };
+
+// const addBundleItem = (cartItems, productToAdd) => {
+//   const existingCartItem = cartItems.find(
+//     (cartItem) => cartItem.id === productToAdd.id
+//   );
+
+//   console.log(cartItems);
+
+//   if (existingCartItem) {
+//     return cartItems.map((cartItem) =>
+//       cartItem.id === productToAdd.id
+//         ? {
+//             ...cartItem,
+//             quantity: cartItem.quantity + 1,
+//           }
+//         : cartItem
+//     );
+//   }
+//   return [...cartItems, { ...productToAdd, quantity: 1 }];
+// };
 
 const removeCartItem = (cartItems, cartItemToRemove) => {
   const existingCartItem = cartItems.find(
@@ -46,6 +70,7 @@ export const CartContext = createContext({
   setIsCartOpen: () => {},
   cartItems: [],
   addItemToCart: () => {},
+  // addBundleToCart: () => {},
   removeItemFromCart: () => {},
   clearItemFromCart: () => {},
   cartCount: 0,
@@ -74,9 +99,17 @@ export const CartProvider = ({ children }) => {
     setCartTotal(newCartTotal);
   }, [cartItems]);
 
-  const addItemToCart = (product) => {
-    setCartItems(addCartItem(cartItems, product));
+  // ORIGINAL
+  const addItemToCart = (product, bundleItems) => {
+    // console.log("Product:", product);
+    // console.log("bundleItems:", bundleItems);
+    setCartItems(addCartItem(cartItems, product, bundleItems));
   };
+
+  // EXPERIMENT
+  // const addItemToCart = (product) => {
+  //   setCartItems(addBundleItem(cartItems, product));
+  // };
 
   const removeItemToCart = (cartItemToRemove) => {
     setCartItems(removeCartItem(cartItems, cartItemToRemove));
