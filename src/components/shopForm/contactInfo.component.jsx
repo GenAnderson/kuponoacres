@@ -8,11 +8,8 @@ import Buttons from "../buttons/buttons.component";
 import "./contactInfo.styles.scss";
 
 const ContactInfo = () => {
-  const { cartItems } = useContext(CartContext);
-  const { cartTotal } = useContext(CartContext);
-  const { clearAllItems } = useContext(CartContext);
-
-  console.log("cartItems: ", cartItems);
+  const { cartItems, cartTotal } = useContext(CartContext);
+  const { clearAllItems, slicePerCount } = useContext(CartContext);
 
   const firstNameInputRef = useRef();
   const lastNameInputRef = useRef();
@@ -41,12 +38,27 @@ const ContactInfo = () => {
     };
 
     const finalCart = [];
+
     cartItems.forEach((item) => {
       const qtyAndProduct = `${item.quantity + "x " + item.name}`;
       finalCart.push(qtyAndProduct);
+      console.log("finalCart:", finalCart);
+
+      if (
+        item.id === 17 ||
+        item.id === 18 ||
+        item.id === 19 ||
+        item.id === 20
+      ) {
+        const separatedItems = slicePerCount(item.items, item.countSelection);
+        finalCart.push(separatedItems.map((oneBunch) => `Order: ${oneBunch}`));
+        // finalCart.push(`${item.name}`, bunchedItems);
+      }
     });
 
     const finalOrderInfo = Object.assign({ ...finalCart }, orderInfo);
+
+    console.log(finalOrderInfo);
 
     // OLD (keep just in case)
     // const finalCart = [];
@@ -60,21 +72,21 @@ const ContactInfo = () => {
     // });
 
     // EMAIL SENDING
-    // emailjs
-    //   .send(
-    //     "service_7odam6k",
-    //     "template_ooqvh9q",
-    //     finalOrderInfo,
-    //     "f7ubLR15pkBC2Sece"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .send(
+        "service_7odam6k",
+        "template_ooqvh9q",
+        finalOrderInfo,
+        "f7ubLR15pkBC2Sece"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
 
     clearAllItems();
   };

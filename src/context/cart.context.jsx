@@ -7,11 +7,10 @@ const identifyBundle = (product, bundleItems, cartItems) => {
   bundleItems.map((bundleItem) => {
     return allItems.filter((item) => {
       if (+bundleItem.itemID === item.id) {
-        product.items.push(item.name);
+        product.items.push([item.name]);
       }
     });
   });
-
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === product.id
   );
@@ -26,7 +25,7 @@ const identifyBundle = (product, bundleItems, cartItems) => {
         : cartItem
     );
   }
-  console.log("cartItems:", cartItems);
+
   return [...cartItems, { ...product, quantity: 1 }];
 };
 
@@ -81,6 +80,7 @@ export const CartContext = createContext({
   cartCount: 0,
   cartTotal: 0,
   identifyBundle: () => {},
+  // setBundleItems: [],
 });
 
 export const CartProvider = ({ children }) => {
@@ -121,6 +121,15 @@ export const CartProvider = ({ children }) => {
     setCartItems(clearCartItem(cartItems, cartItemToClear));
   };
 
+  const slicePerCount = function (arr, count) {
+    const newVal = [];
+    for (let i = 0; i < arr.length; i += count) {
+      const chunk = arr.slice(i, i + count);
+      newVal.push(chunk.toString(", "));
+    }
+    return newVal;
+  };
+
   const clearAllItems = () => {
     setCartCount(0);
     setCartItems([]);
@@ -139,6 +148,7 @@ export const CartProvider = ({ children }) => {
     cartTotal,
     clearAllItems,
     addBundleToCart,
+    slicePerCount,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

@@ -8,11 +8,10 @@ import "./bundleCard.styles.scss";
 
 const BundleCard = ({ product }) => {
   const { id, name, price, description, photo, countSelection } = product;
-  const { addItemToCart, addBundleToCart } = useContext(CartContext);
+  const { addBundleToCart } = useContext(CartContext);
   const [bundleItems, setBundleItems] = useState([]);
 
   const addBundle = () => {
-    // addItemToCart(product);
     addBundleToCart(product, bundleItems);
   };
 

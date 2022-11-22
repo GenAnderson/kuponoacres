@@ -215,6 +215,7 @@ const allItems = [
     countSelection: 7,
     items: [],
   },
+
   {
     id: 20,
     name: "Bulk Order Bundle",
@@ -226,5 +227,11 @@ const allItems = [
     items: [],
   },
 ];
+// const slicePerCount = function (arr, count) {
+//   for (let i = 0; i < arr.length; i++) {
+//     const chunk = arr.slice(i, count);
+//     this.itemsFiltered.push(chunk);
+//   }
+// };
 
 export default allItems;
