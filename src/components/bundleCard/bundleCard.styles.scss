@@ -78,8 +78,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     align-items: center;
+
     box-shadow: 0.2rem 0.5rem 0.7rem #333;
     border-radius: 2rem;
 
@@ -87,7 +87,7 @@
       font-size: 2rem;
       text-transform: uppercase;
       font-weight: bold;
-      text-align: center;
+      align-self: center;
     }
     .dropDownListBox {
       display: flex;
@@ -107,10 +107,10 @@
 .gridSpecial {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
+  margin: 0 auto;
 }
 .howContainer {
   button {
-    margin: auto;
+    margin: 0 auto;
   }
 }

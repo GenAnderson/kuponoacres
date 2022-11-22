@@ -193,6 +193,7 @@ const allItems = [
       "Includes: your choice of 5 x 24 fluid oz. microgreen containers",
     photo: require("../../images/bun5.jpg"),
     countSelection: 5,
+    items: [],
   },
   {
     id: 18,
@@ -202,6 +203,7 @@ const allItems = [
       "Includes: your choice of 6 x 24 fluid oz. microgreen containers",
     photo: require("../../images/bun6.jpg"),
     countSelection: 6,
+    items: [],
   },
   {
     id: 19,
@@ -211,6 +213,7 @@ const allItems = [
       "Includes: your choice of 7 x 24 fluid oz. microgreen containers",
     photo: require("../../images/bun7.jpg"),
     countSelection: 7,
+    items: [],
   },
   {
     id: 20,
@@ -220,6 +223,7 @@ const allItems = [
       "Includes: your choice of 3 x 48 fluid oz. microgreen containers",
     photo: require("../../images/bunbulk.jpg"),
     countSelection: 3,
+    items: [],
   },
 ];
 

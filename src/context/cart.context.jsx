@@ -1,10 +1,36 @@
+import allItems from "../components/shopForm/allItems";
+// only imported allItems above for findBundleItem
+
 import { createContext, useState, useEffect } from "react";
 
-const addCartItem = (cartItems, productToAdd, bundleItems) => {
-  console.log(bundleItems);
+const identifyBundle = (product, bundleItems, cartItems) => {
+  bundleItems.map((bundleItem) => {
+    return allItems.filter((item) => {
+      if (+bundleItem.itemID === item.id) {
+        product.items.push(item.name);
+      }
+    });
+  });
 
-  //NEED A WAY TO GET BUNDLE ITEMS TO END!!!
+  const existingCartItem = cartItems.find(
+    (cartItem) => cartItem.id === product.id
+  );
 
+  if (existingCartItem) {
+    return cartItems.map((cartItem) =>
+      cartItem.id === product.id
+        ? {
+            ...cartItem,
+            quantity: cartItem.quantity + 1,
+          }
+        : cartItem
+    );
+  }
+  console.log("cartItems:", cartItems);
+  return [...cartItems, { ...product, quantity: 1 }];
+};
+
+const addCartItem = (cartItems, productToAdd) => {
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === productToAdd.id
   );
@@ -21,26 +47,6 @@ const addCartItem = (cartItems, productToAdd, bundleItems) => {
   }
   return [...cartItems, { ...productToAdd, quantity: 1 }];
 };
-
-// const addBundleItem = (cartItems, productToAdd) => {
-//   const existingCartItem = cartItems.find(
-//     (cartItem) => cartItem.id === productToAdd.id
-//   );
-
-//   console.log(cartItems);
-
-//   if (existingCartItem) {
-//     return cartItems.map((cartItem) =>
-//       cartItem.id === productToAdd.id
-//         ? {
-//             ...cartItem,
-//             quantity: cartItem.quantity + 1,
-//           }
-//         : cartItem
-//     );
-//   }
-//   return [...cartItems, { ...productToAdd, quantity: 1 }];
-// };
 
 const removeCartItem = (cartItems, cartItemToRemove) => {
   const existingCartItem = cartItems.find(
@@ -70,11 +76,11 @@ export const CartContext = createContext({
   setIsCartOpen: () => {},
   cartItems: [],
   addItemToCart: () => {},
-  // addBundleToCart: () => {},
   removeItemFromCart: () => {},
   clearItemFromCart: () => {},
   cartCount: 0,
   cartTotal: 0,
+  identifyBundle: () => {},
 });
 
 export const CartProvider = ({ children }) => {
@@ -99,17 +105,13 @@ export const CartProvider = ({ children }) => {
     setCartTotal(newCartTotal);
   }, [cartItems]);
 
-  // ORIGINAL
-  const addItemToCart = (product, bundleItems) => {
-    // console.log("Product:", product);
-    // console.log("bundleItems:", bundleItems);
-    setCartItems(addCartItem(cartItems, product, bundleItems));
+  const addItemToCart = (product) => {
+    setCartItems(addCartItem(cartItems, product));
   };
 
-  // EXPERIMENT
-  // const addItemToCart = (product) => {
-  //   setCartItems(addBundleItem(cartItems, product));
-  // };
+  const addBundleToCart = (product, bundleItems) => {
+    setCartItems(identifyBundle(product, bundleItems, cartItems));
+  };
 
   const removeItemToCart = (cartItemToRemove) => {
     setCartItems(removeCartItem(cartItems, cartItemToRemove));
@@ -117,6 +119,13 @@ export const CartProvider = ({ children }) => {
 
   const clearItemFromCart = (cartItemToClear) => {
     setCartItems(clearCartItem(cartItems, cartItemToClear));
+  };
+
+  const clearAllItems = () => {
+    setCartCount(0);
+    setCartItems([]);
+    setCartTotal(0);
+    setIsCartOpen(false);
   };
 
   const value = {
@@ -128,6 +137,8 @@ export const CartProvider = ({ children }) => {
     removeItemToCart,
     clearItemFromCart,
     cartTotal,
+    clearAllItems,
+    addBundleToCart,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

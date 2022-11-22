@@ -10,6 +10,7 @@ import "./contactInfo.styles.scss";
 const ContactInfo = () => {
   const { cartItems } = useContext(CartContext);
   const { cartTotal } = useContext(CartContext);
+  const { clearAllItems } = useContext(CartContext);
 
   console.log("cartItems: ", cartItems);
 
@@ -47,6 +48,7 @@ const ContactInfo = () => {
 
     const finalOrderInfo = Object.assign({ ...finalCart }, orderInfo);
 
+    // OLD (keep just in case)
     // const finalCart = [];
     // cartItems.forEach((item) => {
     //   const buyItem = {
@@ -57,6 +59,7 @@ const ContactInfo = () => {
     //   finalCart.push(buyItem);
     // });
 
+    // EMAIL SENDING
     // emailjs
     //   .send(
     //     "service_7odam6k",
@@ -72,6 +75,8 @@ const ContactInfo = () => {
     //       console.log(error.text);
     //     }
     //   );
+
+    clearAllItems();
   };
 
   return (

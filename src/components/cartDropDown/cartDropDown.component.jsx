@@ -9,8 +9,9 @@ import "./cartDropDown.styles.scss";
 
 const CartDropDown = function () {
   const { cartItems } = useContext(CartContext);
+  const { setIsCartOpen } = useContext(CartContext);
 
-  // console.log(cartItems);
+  const closeCartDropDown = () => setIsCartOpen(false);
 
   return (
     <div className="cartDropDownContainer">
@@ -20,7 +21,9 @@ const CartDropDown = function () {
         ))}
       </div>
       <Link to="/finalize-order">
-        <Buttons buttonType={"sendOrder"}>Finalize Order</Buttons>
+        <Buttons buttonType={"sendOrder"} onClick={closeCartDropDown}>
+          Finalize Order
+        </Buttons>
       </Link>
     </div>
   );

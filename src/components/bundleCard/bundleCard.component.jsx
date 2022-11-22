@@ -8,26 +8,13 @@ import "./bundleCard.styles.scss";
 
 const BundleCard = ({ product }) => {
   const { id, name, price, description, photo, countSelection } = product;
-  const { addItemToCart } = useContext(CartContext);
+  const { addItemToCart, addBundleToCart } = useContext(CartContext);
   const [bundleItems, setBundleItems] = useState([]);
 
-  const addProductToCart = () => {
-    addItemToCart(product, bundleItems);
+  const addBundle = () => {
+    // addItemToCart(product);
+    addBundleToCart(product, bundleItems);
   };
-
-  function handleClick(event) {
-    event.currentTarget.parentElement.classList.add("rotateFront");
-    event.currentTarget.parentElement.nextSibling.classList.add("rotateBack");
-  }
-
-  function goBack(event) {
-    event.currentTarget.parentElement.parentElement.classList.remove(
-      "rotateBack"
-    );
-    event.currentTarget.parentElement.parentElement.previousSibling.classList.remove(
-      "rotateFront"
-    );
-  }
 
   const dropDownHandler = (event) => {
     const key = event.currentTarget.id;
@@ -38,6 +25,20 @@ const BundleCard = ({ product }) => {
       return [...newState, { id: key, itemID: itemID }];
     });
   };
+
+  //// Rotating card function ////
+  function rotateFront(event) {
+    event.currentTarget.parentElement.classList.add("rotateFront");
+    event.currentTarget.parentElement.nextSibling.classList.add("rotateBack");
+  }
+  function rotateBack(event) {
+    event.currentTarget.parentElement.parentElement.classList.remove(
+      "rotateBack"
+    );
+    event.currentTarget.parentElement.parentElement.previousSibling.classList.remove(
+      "rotateFront"
+    );
+  }
 
   return (
     <div className="mainBundles" key={id}>
@@ -52,13 +53,13 @@ const BundleCard = ({ product }) => {
           className="btn-link"
         ></a>
         <img src={photo} alt={name} />
-        <Buttons buttonType="smaller" onClick={handleClick}>
+        <Buttons buttonType="smaller" onClick={rotateFront}>
           Select
         </Buttons>
       </div>
       <div className="mainBundles bundle__back">
         <div className="gridSpecial">
-          <Buttons buttonType="smallBack" onClick={goBack}>
+          <Buttons buttonType="smallBack" onClick={rotateBack}>
             ←
           </Buttons>
           <p className="dropDownListText">Select {countSelection}</p>
@@ -100,7 +101,7 @@ const BundleCard = ({ product }) => {
             ""
           )}
         </div>
-        <Buttons buttonType="addToCart" onClick={addProductToCart}>
+        <Buttons buttonType="addToCart" onClick={addBundle}>
           ADD
         </Buttons>
       </div>
