@@ -1,7 +1,7 @@
 import { useInView } from "react-intersection-observer";
 
 import "./mission.styles.scss";
-import missionPhoto from "../../images/mission.jpg";
+import missionPhoto from "../../images/mission.avif";
 
 function Mission() {
   const { ref: myRefMission, inView: missionBoxInView } = useInView({

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CartContext } from "../context/cart.context";
 
 import ContactInfo from "../components/shopForm/contactInfo.component";
@@ -8,6 +8,10 @@ import CheckOutItem from "../components/checkoutItem/checkoutItem";
 
 const FinalizeOrder = function () {
   const { cartItems, cartTotal } = useContext(CartContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="finalizeOrderContainer">

@@ -9,7 +9,7 @@ const ProductsSection = () => {
         <div className="fixSpanGrid">
           <p className="sectionHeading">Products</p>
           <Buttons buttonType={"smallBack"}>
-            <a href={pdf} target="_blank">
+            <a href={pdf} target="_blank" rel="noreferrer">
               Learn more about microgreens →
             </a>
           </Buttons>
@@ -18,7 +18,7 @@ const ProductsSection = () => {
           <p className="number">01</p>
           <p className="desc">Nutrient-Dense Microgreens</p>
           <img
-            src={require("../images/dense.jpg")}
+            src={require("../images/dense.avif")}
             className="products-miniphoto"
             alt="microgreens"
           />
@@ -27,7 +27,7 @@ const ProductsSection = () => {
           <p className="number">02</p>
           <p className="desc">Functional Health Microgreen Blends</p>
           <img
-            src={require("../images/blend.JPEG")}
+            src={require("../images/blend.jpg")}
             className="products-miniphoto"
             alt="microgreen blend"
           />
@@ -45,7 +45,7 @@ const ProductsSection = () => {
           <p className="number">04</p>
           <p className="desc">Specialty Mushrooms</p>
           <img
-            src={require("../images/mushroom.jpg")}
+            src={require("../images/mushroom.avif")}
             className="products-miniphoto"
             alt="microgreen red mushroom"
           />

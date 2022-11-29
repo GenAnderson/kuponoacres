@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import "./who.styles.scss";
-import whoPhoto from "../../images/who.jpg";
+import whoPhoto from "../../images/who.avif";
 
 const Who = () => {
   const { ref: myRefWho, inView: elementVisible } = useInView({

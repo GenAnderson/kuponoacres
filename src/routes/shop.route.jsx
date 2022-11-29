@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { allProductContext } from "../context/products.context";
 
 import ProductCard from "../components/shopForm/productCard.component";
@@ -6,6 +6,10 @@ import BundleCard from "../components/bundleCard/bundleCard.component";
 
 const Shop = () => {
   const { allProducts } = useContext(allProductContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="shopContainer">

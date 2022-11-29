@@ -4,7 +4,12 @@ import ProductsSection from "../components/products.component";
 import WhySection from "../components/why.component";
 import How from "../components/how.component";
 
+import { useEffect } from "react";
+
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <HeroSection />
