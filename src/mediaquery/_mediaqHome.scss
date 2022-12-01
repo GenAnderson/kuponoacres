@@ -23,6 +23,7 @@
   body {
     .kuponoLogo {
       top: 48%;
+      width: 20vh;
     }
   }
 }
@@ -30,9 +31,6 @@
 // MAX HEIGHT 752px
 @media (max-height: 47em) {
   body {
-    .kuponoLogo {
-      top: 48%;
-    }
     .sectionHero {
       height: 115vh;
     }
@@ -55,6 +53,11 @@
       .kuponoLogo {
         top: 48%;
       }
+      .heroTextBelow {
+        font-size: 1.5rem;
+        height: 40vh;
+        padding: 0rem 2rem;
+      }
     }
   }
 }
@@ -65,37 +68,21 @@
     .sectionHero {
       .heroText {
         h1 {
-          font-size: 9rem;
+          font-size: 6rem;
+          letter-spacing: 0.4rem;
         }
       }
       .heroTextTwo {
-        font-size: 3rem;
-        padding: 1rem 10rem;
+        font-size: 2rem;
+        padding: 1rem;
       }
       .kuponoLogo {
         top: 51%;
-      }
-    }
-  }
-}
-
-//MAX HEIGHT 450px & MAX WIDTH 890px
-@media (max-height: 28em) and (max-width: 56em) {
-  body {
-    .sectionHero {
-      height: 115vh;
-      .heroText {
-        padding-top: 6rem;
-        h1 {
-          font-size: 6rem;
-        }
+        width: 22vh;
       }
       .heroTextBelow {
+        font-size: 1.4rem;
         height: 40vh;
-      }
-      .kuponoLogo {
-        top: 26%;
-        width: 30vh;
       }
     }
   }
@@ -344,10 +331,6 @@
 //MAX WIDTH 1056px (small laptop)
 @media (max-width: 66em) {
   body {
-    .kuponoLogo {
-      top: 47%;
-      width: 23vh;
-    }
     .sectionHeading {
       font-size: 4.5rem;
       letter-spacing: 0.2rem;
@@ -393,10 +376,10 @@
     .heroTextTwo {
       font-size: 3rem;
     }
-    .heroTextBelow {
-      font-size: 1.7rem;
-      padding: 0rem 2rem;
-    }
+    // .heroTextBelow {
+    //   font-size: 1.7rem;
+    //   padding: 0rem 2rem;
+    // }
     .sectionHeading {
       font-size: 4rem;
       letter-spacing: 0.1rem;
@@ -549,15 +532,9 @@
 //MAX WIDTH 592px
 @media (max-width: 37em) {
   body {
-    .heroText {
-      h1 {
-        font-size: 6rem;
-        letter-spacing: 0.4rem;
-        // padding-top: 12rem;
-      }
-    }
     .heroTextTwo {
       font-size: 2.5rem;
+      padding: 2rem;
     }
 
     .missionBackgroundBox::after {
@@ -613,6 +590,14 @@
     .heroTextTwo {
       padding: 2rem 2rem;
     }
+
+    .heroTextBelow {
+      padding: 0rem 1rem;
+    }
+    .kuponoLogo {
+      width: 19vh;
+    }
+
     .whyGrid {
       padding: 0rem 2rem 2rem 2rem;
     }
@@ -671,24 +656,40 @@
   }
 }
 
-//MAX WIDTH 312px
+//MAX WIDTH 400px
+@media (max-width: 25em) {
+  body {
+    .sectionHero {
+      h1 {
+        font-size: 5rem;
+      }
+      .heroTextBelow {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+//MAX WIDTH 368px
 @media (max-width: 23em) {
   body {
-    .sectionHeading {
-      padding: 2rem;
-      font-size: 3rem;
-    }
-    .whoText {
-      padding: 0rem 1rem 1rem 1rem;
-    }
-    .mainBundles {
-      width: 26rem;
-
-      .bundle__front {
-        width: 26rem;
+    .sectionHero {
+      .sectionHeading {
+        padding: 2rem;
+        font-size: 3rem;
       }
-      .bundle__back {
+      .whoText {
+        padding: 0rem 1rem 1rem 1rem;
+      }
+      .mainBundles {
         width: 26rem;
+
+        .bundle__front {
+          width: 26rem;
+        }
+        .bundle__back {
+          width: 26rem;
+        }
       }
     }
   }
