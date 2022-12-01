@@ -14,9 +14,6 @@
       .heroText {
         height: 70vh;
       }
-      .heroTextBelow {
-        height: 42vh;
-      }
     }
   }
 }
@@ -34,13 +31,10 @@
 @media (max-height: 47em) {
   body {
     .kuponoLogo {
-      top: 45%;
+      top: 48%;
     }
     .sectionHero {
       height: 115vh;
-      .heroTextBelow {
-        height: 42vh;
-      }
     }
   }
 }
@@ -53,15 +47,33 @@
     }
     .sectionHero {
       height: 120vh;
-      .heroTextBelow {
-        height: 50vh;
-      }
+
       .heroText {
         padding-top: 10rem;
         height: 65vh;
       }
       .kuponoLogo {
-        top: 42%;
+        top: 48%;
+      }
+    }
+  }
+}
+
+// MAX HEIGHT 560px
+@media (max-height: 35em) {
+  body {
+    .sectionHero {
+      .heroText {
+        h1 {
+          font-size: 9rem;
+        }
+      }
+      .heroTextTwo {
+        font-size: 3rem;
+        padding: 1rem 10rem;
+      }
+      .kuponoLogo {
+        top: 51%;
       }
     }
   }
@@ -83,7 +95,7 @@
       }
       .kuponoLogo {
         top: 26%;
-        width: 32vh;
+        width: 30vh;
       }
     }
   }
@@ -152,6 +164,9 @@
 //MAX WIDTH 1680px
 @media (max-width: 105em) {
   body {
+    .heroTextBelow {
+      height: 35vh;
+    }
     .whoBackgroundBox {
       &::after {
         width: 46%;
