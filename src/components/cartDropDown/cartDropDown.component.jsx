@@ -16,9 +16,11 @@ const CartDropDown = function () {
   return (
     <div className="cartDropDownContainer">
       <div>
-        {cartItems.map((item) => (
-          <CartItem key={item.id} cartItem={item} />
-        ))}
+        {cartItems.length ? (
+          cartItems.map((item) => <CartItem key={item.id} cartItem={item} />)
+        ) : (
+          <p className="emptyMessage">Your cart is empty</p>
+        )}
       </div>
       <Link to="/finalize-order">
         <Buttons buttonType={"sendOrder"} onClick={closeCartDropDown}>
