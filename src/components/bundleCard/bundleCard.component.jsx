@@ -51,7 +51,7 @@ const BundleCard = ({ product }) => {
           rel="noreferrer"
           className="btn-link"
         ></a>
-        <img src={photo} alt={name} />
+        <img src={photo} alt={name} width="300px" height="400px" />
         <Buttons buttonType="smaller" onClick={rotateFront}>
           Select
         </Buttons>

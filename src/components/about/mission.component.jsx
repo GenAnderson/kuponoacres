@@ -20,6 +20,8 @@ function Mission() {
           src={missionPhoto}
           className="missionPhoto"
           alt="close-up of microgreens"
+          width="300px"
+          height="450px"
         />
         <div className="missionTextBox">
           <p className="sectionHeading">Our Mission</p>

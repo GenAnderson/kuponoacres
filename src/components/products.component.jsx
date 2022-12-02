@@ -21,6 +21,8 @@ const ProductsSection = () => {
             src={require("../images/dense.avif")}
             className="products-miniphoto"
             alt="microgreens"
+            width="200px"
+            height="300px"
           />
         </div>
         <div className="products-text-box">
@@ -30,6 +32,8 @@ const ProductsSection = () => {
             src={require("../images/blend.jpg")}
             className="products-miniphoto"
             alt="microgreen blend"
+            width="200px"
+            height="300px"
           />
         </div>
         <div className="products-text-box">
@@ -39,6 +43,8 @@ const ProductsSection = () => {
             src={require("../images/chef.jpg")}
             className="products-miniphoto"
             alt="microgreen variety"
+            width="200px"
+            height="300px"
           />
         </div>
         <div className="products-text-box">
@@ -48,6 +54,8 @@ const ProductsSection = () => {
             src={require("../images/mushroom.avif")}
             className="products-miniphoto"
             alt="microgreen red mushroom"
+            width="200px"
+            height="300px"
           />
         </div>
         <div className="products-text-box">
@@ -57,6 +65,8 @@ const ProductsSection = () => {
             src={require("../images/flowers.jpg")}
             className="products-miniphoto"
             alt="microgreen edible flowers"
+            width="200px"
+            height="300px"
           />
         </div>
       </div>

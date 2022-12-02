@@ -28,7 +28,13 @@ const Who = () => {
             organic pest management.
           </p>
         </div>
-        <img src={whoPhoto} className="whoPhoto" alt="Kupono Acres owners" />
+        <img
+          src={whoPhoto}
+          className="whoPhoto"
+          alt="Kupono Acres owners"
+          width="500px"
+          height="700px"
+        />
       </div>
     </div>
   );
