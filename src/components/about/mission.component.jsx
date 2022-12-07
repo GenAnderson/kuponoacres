@@ -26,7 +26,7 @@ function Mission() {
         <div className="missionTextBox">
           <p className="sectionHeading">Our Mission</p>
           <p className="missionText">
-            Our mission at Kūpono Acers is to increase Hawaii's food security by
+            Our mission at Kūpono Acres is to increase Hawaii's food security by
             providing our community with the highest quality of fresh,
             nutrient-dense produce through honest, sustainable, and organic
             agricultural practices
