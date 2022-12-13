@@ -25,13 +25,7 @@ const CheckOutItem = function ({ cartItem }) {
         <img className="checkout__photo" src={photo} alt={`${name}`} />
         <p className="checkout__itemName">{name}</p>
 
-        <div className="checkout__bundleItems">
-          {/* {slicePerCount(items, countSelection).map((items) => (
-            <p key={items}>⁕{items}</p>
-          ))} */}
-
-          {pushedBundleItems}
-        </div>
+        <div className="checkout__bundleItems">{pushedBundleItems}</div>
       </div>
       <div className="checkout__quantity">
         <div className="arrow" onClick={() => removeItemToCart(cartItem)}>
@@ -42,7 +36,7 @@ const CheckOutItem = function ({ cartItem }) {
           +
         </div>
       </div>
-      <span className="checkout__price">${price}</span>
+      <span className="checkout__price">${price.toFixed(2)}</span>
       <div
         className="checkout__remove"
         onClick={() => clearItemFromCart(cartItem)}

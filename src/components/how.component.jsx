@@ -19,8 +19,8 @@ const How = () => {
           src={require("../images/products-bkg.jpg")}
           className="products-photo-bkg"
           alt="microgreens"
-          width="2600px"
-          height="800px"
+          width="1300px"
+          height="700px"
         />
       </div>
       <div className="howContainer">

@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
     <div className="productCard" key={id}>
       <div className="productCard__inner">
         <div className="productCard__name">{name}</div>
-        <span className="productCard__price">${price}</span>
+        <span className="productCard__price">${price.toFixed(2)}</span>
       </div>
       <div className="productCard__flavor">
         <i>Flavor: {flavor}</i>

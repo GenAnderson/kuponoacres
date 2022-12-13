@@ -37,7 +37,7 @@ const FinalizeOrder = function () {
         <CheckOutItem key={cartItem.id} cartItem={cartItem} />
       ))}
       <div className="totalContainer">
-        <p className="total">Total: ${cartTotal}</p>
+        <p className="total">Total: ${cartTotal.toFixed(2)}</p>
         <p className="tax">(Tax included)</p>
       </div>
     </div>
