@@ -16,6 +16,8 @@ const Navigation = () => {
   const [isHovering2, setIsHovering2] = useState(false);
   const [isHovering3, setIsHovering3] = useState(false);
   const [isHovering4, setIsHovering4] = useState(false);
+  const [isHovering5, setIsHovering5] = useState(false);
+  const [isHovering6, setIsHovering6] = useState(false);
 
   const handleMouseOver1 = () => {
     setIsHovering1(true);
@@ -29,11 +31,19 @@ const Navigation = () => {
   const handleMouseOver4 = () => {
     setIsHovering4(true);
   };
+  const handleMouseOver5 = () => {
+    setIsHovering5(true);
+  };
+  const handleMouseOver6 = () => {
+    setIsHovering6(true);
+  };
   const handleMouseOut = () => {
     setIsHovering1(false);
     setIsHovering2(false);
     setIsHovering3(false);
     setIsHovering4(false);
+    setIsHovering5(false);
+    setIsHovering6(false);
   };
 
   return (
@@ -107,7 +117,30 @@ const Navigation = () => {
             </Link>
             <div className="nav-icon__Bubble">{isHovering4 && <p>Shop</p>}</div>
           </div>
-          <CartIcon />
+          <div
+            className="nav-icon__Container"
+            onMouseOver={handleMouseOver5}
+            onMouseOut={handleMouseOut}
+          >
+            <Link to="/recipes">
+              <img
+                src={require("../../images/icon-recipes.png")}
+                className="nav-icons"
+                alt="shop-icon"
+              />
+            </Link>
+            <div className="nav-icon__Bubble">
+              {isHovering5 && <p>Recipes</p>}
+            </div>
+          </div>
+          <div
+            className="nav-icon__Container"
+            onMouseOver={handleMouseOver6}
+            onMouseOut={handleMouseOut}
+          >
+            <CartIcon />
+            <div className="nav-icon__Bubble">{isHovering6 && <p>Cart</p>}</div>
+          </div>
         </div>
         {isCartOpen && <CartDropDown />}
       </nav>

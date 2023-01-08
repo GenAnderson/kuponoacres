@@ -51,3 +51,32 @@
     font-size: 1.5rem;
   }
 }
+
+//////////COMING SOON PAGE//////////
+
+.comingSoonBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 110rem;
+  height: 70rem;
+  margin: 6rem auto;
+
+  text-align: center;
+  background-image: url("../images/recipes.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10%;
+}
+
+.tempHead {
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.651);
+  padding: 2rem;
+  border-radius: 1rem;
+}

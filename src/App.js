@@ -6,6 +6,7 @@ import Shop from "./routes/shop.route";
 
 import "./App.scss";
 import FinalizeOrder from "./routes/finalize-order.route";
+import Recipes from "./routes/recipes.route";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="shop" element={<Shop />} />
         <Route path="finalize-order" element={<FinalizeOrder />} />
+        <Route path="recipes" element={<Recipes />} />
       </Route>
     </Routes>
   );
