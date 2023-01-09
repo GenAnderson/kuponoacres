@@ -130,7 +130,7 @@ const allItems = [
     flavor: "Mild",
     description:
       "(Red Acre Cabbage, Broccoli, Red Mizuna, Amaranth) Our signature Kupono Acres Micro Mix is designed with mildness, balance, and visual appeal in mind. This balance allows for our micro mix to be used to garnish any plate while its mild flavor profile allows for flexible pairing with a variety of food types. This is a must have for any home chef looking to dress up their plates.",
-    price: 7,
+    price: 7.5,
     photo: require("../../images/prod11.png"),
     category: "Home & Health Menu",
   },
